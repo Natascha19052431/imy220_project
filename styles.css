@@ -1,0 +1,70 @@
+/*Natascha Janse van Rensburg 19052431*/
+
+body 
+{
+	background-image: url("../img/splash.jpg");
+	/*background-repeat: no-repeat;*/
+	background-size: cover;
+	 /*background-position: center right;*/
+}
+form
+{
+
+	padding: 10px;
+
+}
+h1
+{
+	font-family: 'Architects Daughter', cursive;
+}
+
+ul[class^="nav"]
+{
+	background: black;
+	/*opacity: 0.6*/
+}
+
+div[class^="card "]
+{
+	background-color: #ffffff;
+	visibility: hidden;
+	font-family: 'Indie Flower', cursive;
+}
+
+div[class^="card "]
+{
+	background-color: #786757;
+		 
+}
+
+.nav-link
+{
+	color: #265925;
+	font-size: large;
+}
+
+.nav-link:hover
+{
+	color: #265925;
+	font-size: large;
+}
+
+
+i
+{padding-left: 10px;}
+
+@media only screen and (min-width: 992px)
+{
+	button:hover .fa-angle-right{
+		transform-origin: 80% ;
+
+		transform: rotate(90deg);
+		/*margin-padding: 0px;*/
+
+		padding-left: 20px;
+		transition-duration: 0.5s;
+		/*display: block;*/
+
+	}
+
+}

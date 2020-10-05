@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Snippets</title>
+	<meta charset="utf-8">
+	 <meta name="author" content="Natascha Janse van Rensburg" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css"/> <!-- css link -->
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="icon" type="image/x-icon" href='img/favicon.ico' />
+</head>
+<!-- links -->
+<body>
+
+	<ul class="nav justify-content-end">
+  <li class="nav-item">
+  	<!-- <button type="button" class="btn" onclick="document.getElementById('cardlog').style.visibility = 'visible'">Login</button> -->
+    <a class="nav-link " onclick="document.getElementById('cardlog').style.visibility = 'visible'">Login</a>
+  </li>
+  <li class="nav-item">
+  	<!-- <button type="button" class="btn btn-link">Register</button> -->
+    <a class="nav-link" onclick="document.getElementById('cardreg').style.visibility = 'visible'">Register</a>
+  </li>
+   <li class="nav-item">
+   	<!-- <button type="button" class="btn btn-link">About</button> -->
+    <a class="nav-link" onclick="document.getElementById('about').style.visibility = 'visible'">Abouts</a>
+  </li>
+</ul>
+<!-- links -->
+
+	<div class="container">
+    <div id="about" style='background-image: url("img/about.png"); background-size: cover;background-repeat:no-repeat;'>
+    </div >
+
+
+   <!--  <div class='col-3' style='background-image: url(img/about.png); background-size: cover;background-repeat:no-repeat;'>
+                  </div> -->
+
+
+		<div class="row" >
+			<div class="col-6 offset-3 mt-3" >
+        <!-- <div class="container"> -->
+          <div class="card text-white " id="cardlog" >
+             <div class="card-header col-12" >Log in </div>
+            <form action="php/login.php" method="post">
+               <div class="row">
+               
+                
+                <div class="form-group col-12 col-lg-6  ">
+                  
+                    <label for="email" class="form-label">Email address:</label>
+                    <input class="form-control" type="email" name="loginEmail" id="email" placeholder="john.doe@gmail.com"/>
+                </div>
+                <div class="form-group col-12 col-lg-6  ">
+                    <label class="form-label" for="pass">Password:</label>
+                    <input class="form-control" type="password" name="loginPass" id="pass" placeholder="********"/>
+                </div>
+              
+
+                <button class="btn btn-dark  ml-3 ">Log in   <i class="fa fa-angle-right"></i></button>
+                  </div>
+            </form>
+        </div>
+        <!-- </div> -->
+    </div>
+
+  <div class="col-8 offset-2 mt-3 " >
+         <!-- <div class="container"> -->
+        <div class="card text-white" id="cardreg">
+           
+              <div class="card-header col-12" >Register</div>
+            <form action="php/register.php" method="post" >
+                 <div class=" row">
+              
+             
+                <div class="form-group col-12 col-lg-6">
+                    <label class="form-label" for="fname">First name:</label>
+                    <input class="form-control " type="text" name="regName" id="fname" placeholder="John"/>
+                </div>
+                <div class="form-group col-12 col-lg-6">
+                    <label class="form-label" for="lname">Last name:</label>
+                    <input type="text" name="regSurname" class="form-control " id="lname" placeholder="Doe"/>
+                </div>
+                <div class="form-group col-12 col-lg-6">
+                    <label for="email1" class="form-label">Email address:</label>
+                    <input type="email" name="regEmail" id="email1" class="form-control " placeholder="john.doe@gmail.com"/>
+                </div>
+                <div class="form-group col-12 col-lg-6">
+                    <label class="form-label " for="date">Date of birth:</label>
+                    <input class="form-control" type="date" name="regBirthDate" id="date"/>
+                </div>
+                <div class="form-group col-12 col-lg-6">
+                    <label class="form-label " for="pass1">Create password:</label>
+                    <input class="form-control" type="password" name="regPass" id="pass1" placeholder="********"/>
+                </div>
+                <div class="form-group col-12 col-lg-6">
+                    <label class="form-label " for="pass1">Confirm password:</label>
+                    <input class="form-control" type="password" name="regPass2" id="pass2" placeholder="********"/>
+                </div>
+               
+                <button class="btn btn-dark ml-3">Register  <i class="fa fa-angle-right"></i></button>
+               
+
+                </div>
+            </form>
+        </div>
+		</div>
+
+
+	
+        <!-- </div> -->
+    </div>
+	</div>
+</div>
+</body>
+</html>
